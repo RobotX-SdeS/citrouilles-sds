@@ -1,3 +1,11 @@
+/*
+BUG POSSIBLES/A MODIFIER
+
+-Dans la loop, les IF pourraient ne pas marcher: faire une nouvelle fonction qui les fait clignoter et revenir à la loop.
+-else if statement (syntaxe incorrecte: elseif)
+*/
+
+
 const int bouton2 = 2;
 const int bouton3 = 3;
 const int led =  13;
@@ -13,11 +21,23 @@ void setup() {
 
 void loop(){
   
-  etatBouton = digitalRead(bouton2); // Rendus ici
+  etatBouton2 = digitalRead(bouton2);
+  etatBouton3 = digitalRead(bouton3);
   
-  if (buttonState == HIGH) {     
-    digitalWrite(ledPin, HIGH);  
+  if (etatBouton2 == HIGH) {   
+    digitalWrite(led, HIGH);  // Clignotement rapide
+    delay(400);
+    digitalWrite(led, LOW);
+    delay(400);
   } 
+
+  else if (etatBouton3 == HIGH) {
+    digitalWrite(led, HIGH);  // Clignotement lent
+    delay(800);
+    digitalWrite(led, LOW);
+    delay(800);
+  }
+
   else {
     digitalWrite(ledPin, LOW); 
   }
