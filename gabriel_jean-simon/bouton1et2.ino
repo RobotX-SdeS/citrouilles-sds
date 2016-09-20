@@ -1,8 +1,8 @@
 /*
 BUG POSSIBLES/A MODIFIER
-
 -Dans la loop, les IF pourraient ne pas marcher: faire une nouvelle fonction qui les fait clignoter et revenir à la loop.
 -else if statement (syntaxe incorrecte: elseif)
+ /!\ Bien attribuer le bon port série dans l'onglets options
 */
 
 
@@ -26,19 +26,19 @@ void loop(){
   
   if (etatBouton2 == HIGH) {   
     digitalWrite(led, HIGH);  // Clignotement rapide
-    delay(400);
+    delay(200);
     digitalWrite(led, LOW);
-    delay(400);
+    delay(200);
   } 
 
-  else if (etatBouton3 == HIGH) {
+  if (etatBouton3 == HIGH) {
     digitalWrite(led, HIGH);  // Clignotement lent
-    delay(800);
+    delay(500);
     digitalWrite(led, LOW);
-    delay(800);
+    delay(500);
   }
 
   else {
-    digitalWrite(ledPin, LOW); 
+    digitalWrite(led, LOW); 
   }
 }
