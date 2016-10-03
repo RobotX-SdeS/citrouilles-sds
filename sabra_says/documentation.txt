@@ -1,0 +1,9 @@
+http://www.instructables.com/id/Arduino-Simple-Simon-Says-Game/?ALLSTEPS
+
+4 boutons avec LEDs intégrées (http://www.paradisearcadeshop.com/3031/green-chrome-led-pushbutton.jpg)
+
+2 séquences (easy+hard), donc trouver une pot avec 2 crans (easy, hard) ou 3 crans (off, easy, hard)
+
+système de son (jouer le son quand on réussi/quand on appuie sur un bouton)
+
+OPTIONNEL: Donner un bonbon en easy, 2 bonbons en hard
