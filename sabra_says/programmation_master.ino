@@ -1,7 +1,12 @@
+// Version finale (programme qui sera sur le Arduino)
+
+// Declaration constantes de BOUTONS
 const int bo1 = 2;     
 const int bo2 = 3;
 const int bo3 = 4;
 const int bo4 = 5;
+
+// Declaration constantes de LEDs
 const int led1 = 13;
 const int led2 = 12;
 const int led3 = 11;
@@ -14,6 +19,7 @@ const int son3 = 7;
 const int son4 = 6;
 */
 
+// Declaration ETAT BOUTON
 int buttonState = 0;         
 
 void setup() {
@@ -30,16 +36,14 @@ void setup() {
 }
 
 void loop(){
-  
   buttonState = digitalRead(bo1);
   buttonState = digitalRead(bo2);
  
-  if (buttonState == HIGH) {     
-  
-    digitalWrite(led1, HIGH);  
+    if (buttonState == HIGH) {     
+      digitalWrite(led1, HIGH);  
   } 
-  else {
   
-    digitalWrite(led1, LOW); 
+    else {
+      digitalWrite(led1, LOW); 
   }
   
