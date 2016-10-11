@@ -2,12 +2,17 @@ const int bo1 = 2;
 const int bo2 = 3;
 const int bo3 = 4;
 const int bo4 = 5;
-const int led1 =  13;
-const int led2 =  12;
-const int led3 =  11;
-const int led4 =  10;
+const int led1 = 13;
+const int led2 = 12;
+const int led3 = 11;
+const int led4 = 10;
 
-
+/*
+const int son1 = 9;
+const int son2 = 8;
+const int son3 = 7;
+const int son4 = 6;
+*/
 
 int buttonState = 0;         
 
@@ -26,8 +31,8 @@ void setup() {
 
 void loop(){
   
-  buttonState = digitalRead(buttonPin);
-
+  buttonState = digitalRead(bo1);
+  buttonState = digitalRead(bo2);
  
   if (buttonState == HIGH) {     
   
@@ -37,4 +42,4 @@ void loop(){
   
     digitalWrite(led1, LOW); 
   }
-}
+  
