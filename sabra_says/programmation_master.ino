@@ -1,9 +1,17 @@
 // Version finale (programme qui sera sur le Arduino)
 
 /* Bugs possibles:
-- Aucun pour l'instant
+- Utilisation incorrecte de la commande RANDOM()
+- Appel incorrect de fonctions
 */
 
+// Declaration variables RANDOM sous la forme (numero de séquence)_(led a allumer)
+int s1_1 = 0;
+int s2_1 = 0;
+int s2_2 = 0;
+int s3_1 = 0;
+int s3_2 = 0;
+int s3_3 = 0;
 
 // Declaration constantes de BOUTONS
 const int bo1 = 2;     
@@ -33,7 +41,6 @@ const int son4 = 6;
 
 
 // Fonction SETUP
-
 void setup() {
   
   pinMode(led1, OUTPUT); 
@@ -47,6 +54,7 @@ void setup() {
   pinMode(bo4, INPUT);  
 }
 
+// Fontion LOOP
 void loop(){
   buttonState = digitalRead(bo1);
   buttonState = digitalRead(bo2);
@@ -58,4 +66,33 @@ void loop(){
     else {
       digitalWrite(led1, LOW); 
   }
+  
+
+  
+  
+  
+  
+  /*
+  // Schema theorique des commandes pour une sequence
+  
+// Fonction SEQUENCE 1
+void seq1() {
+
+random(1, 4);
+
+
+  if (ranomd)
+
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
