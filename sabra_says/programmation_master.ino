@@ -89,7 +89,7 @@ void seq1(){
         
       else(){
         digitalWrite(led1, LOW);
-          seq2();
+          seq2_1();
        }
       }
     }
@@ -115,7 +115,7 @@ void seq1(){
         
       else(){
         digitalWrite(led2, LOW);
-          seq2();
+          seq2_1();
        }
       }
     }
@@ -141,7 +141,7 @@ void seq1(){
         
       else(){
         digitalWrite(led3, LOW);
-          seq2();
+          seq2_1();
        }
       }
     }
@@ -167,7 +167,7 @@ void seq1(){
         
       else(){
         digitalWrite(led4, LOW);
-          seq2();
+          seq2_1();
        }
       }
     }
@@ -182,10 +182,453 @@ void seq1(){
 
 //Fonction seq2
 
-void seq2(){
+void seq2_1(){
 
+	if (s2_1 == 1) {
 
+	  digitalWrite(led1, HIGH);
+	  delay(1000);
+	  digitalWrite(led1, LOW);
+	  delay(1000);
+    
+    while (etatbo1 == LOW) {
+      
+      if (etatbo1 == HIGH) {
+        digitalWrite (led1, HIGH);
+        delay(500);
+        digitalWrite(led1, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led1, LOW);
+        seq2_2();
+      }
+    }
+  }
 
+	else if (s2_1 == 2) {
 
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
 
+      while (etatbo2 == LOW) {
+      
+      if (etatbo2 == HIGH) {
+        digitalWrite (led2, HIGH);
+        delay(500);
+        digitalWrite(led2, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led2, LOW);
+        seq2_2();
+       }
+    }
+  }
+
+	else if (s2_1 == 3) {
+
+	  digitalWrite(led3, HIGH);
+	  delay(1000);
+	  digitalWrite(led3, LOW);
+	  delay(1000);
+
+    while (etatbo3 == LOW) {
+      
+      if (etatbo3 == HIGH) {
+        digitalWrite (led3, HIGH);
+        delay(500);
+        digitalWrite(led3, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led3, LOW);
+        seq2_2();
+      }
+    }
+  }
+
+	else if (s2_1 == 4) {
+
+	  digitalWrite(led4, HIGH);
+	  delay(1000);
+	  digitalWrite(led4, LOW);
+	  delay(1000);
+
+    while (etatbo4 == LOW) {
+      
+      if (etatbo4 == HIGH) {
+        digitalWrite (led4, HIGH);
+        delay(500);
+        digitalWrite(led4, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led4, LOW);
+        seq2_2();
+      }
+    }
+  }
 }
+
+
+
+void seq2_2() {
+  
+	if (s2_2 == 1) {
+
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
+    
+        while (etatbo1 == LOW) {
+      
+      if (etatbo1 == HIGH) {
+        digitalWrite (led1, HIGH);
+        delay(500);
+        digitalWrite(led1, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led1, LOW);
+        seq3_1();
+      }
+    }
+  }
+
+	else if (s2_2 == 2) {
+
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
+
+        while (etatbo2 == LOW) {
+      
+      if (etatbo2 == HIGH) {
+        digitalWrite (led2, HIGH);
+        delay(500);
+        digitalWrite(led2, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led2, LOW);
+        seq3_1();
+      }
+    }
+  }
+
+	else if (s2_2 == 3) {
+
+	  digitalWrite(led3, HIGH);
+	  delay(1000);
+	  digitalWrite(led3, LOW);
+	  delay(1000);
+
+        while (etatbo3 == LOW) {
+      
+      if (etatbo3 == HIGH) {
+        digitalWrite (led3, HIGH);
+        delay(500);
+        digitalWrite(led3, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led3, LOW);
+        seq3_1();
+      }
+    }
+  }
+
+	else if (s2_2 == 4) {
+
+	  digitalWrite(led4, HIGH);
+	  delay(1000);
+	  digitalWrite(led4, LOW);
+	  delay(1000);
+
+        while (etatbo4 == LOW) {
+      
+      if (etatbo4 == HIGH) {
+        digitalWrite (led4, HIGH);
+        delay(500);
+        digitalWrite(led4, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led4, LOW);
+        seq3_1();
+      }
+    }
+  }
+}
+void seq3_1(){
+  	if (s3_1 == 1) {
+
+	  digitalWrite(led1, HIGH);
+	  delay(1000);
+	  digitalWrite(led1, LOW);
+	  delay(1000);
+    
+    while (etatbo1 == LOW) {
+      
+      if (etatbo1 == HIGH) {
+        digitalWrite (led1, HIGH);
+        delay(500);
+        digitalWrite(led1, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led1, LOW);
+        seq3_2();
+      }
+    }
+  }
+
+	else if (s3_1 == 2) {
+
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
+
+      while (etatbo2 == LOW) {
+      
+      if (etatbo2 == HIGH) {
+        digitalWrite (led2, HIGH);
+        delay(500);
+        digitalWrite(led2, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led2, LOW);
+        seq3_2();
+      }
+    }
+  }
+
+	else if (s3_1 == 3) {
+
+	  digitalWrite(led3, HIGH);
+	  delay(1000);
+	  digitalWrite(led3, LOW);
+	  delay(1000);
+
+    while (etatbo3 == LOW) {
+      
+      if (etatbo3 == HIGH) {
+        digitalWrite (led3, HIGH);
+        delay(500);
+        digitalWrite(led3, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led3, LOW);
+        seq3_2();
+      }
+    }
+  }
+
+	else if (s3_1 == 4) {
+
+	  digitalWrite(led4, HIGH);
+	  delay(1000);
+	  digitalWrite(led4, LOW);
+	  delay(1000);
+
+    while (etatbo4 == LOW) {
+      
+      if (etatbo4 == HIGH) {
+        digitalWrite (led4, HIGH);
+        delay(500);
+        digitalWrite(led4, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led4, LOW);
+        seq3_2();
+      }
+    }
+  }
+}
+
+
+void seq3_2() {
+    	if (s3_2 == 1) {
+
+	  digitalWrite(led1, HIGH);
+	  delay(1000);
+	  digitalWrite(led1, LOW);
+	  delay(1000);
+    
+    while (etatbo1 == LOW) {
+      
+      if (etatbo1 == HIGH) {
+        digitalWrite (led1, HIGH);
+        delay(500);
+        digitalWrite(led1, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led1, LOW);
+        seq3_3();
+      }
+    }
+  }
+
+	else if (s3_2 == 2) {
+
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
+
+      while (etatbo2 == LOW) {
+      
+      if (etatbo2 == HIGH) {
+        digitalWrite (led2, HIGH);
+        delay(500);
+        digitalWrite(led2, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led2, LOW);
+        seq3_3();
+      }
+    }
+  }
+
+	else if (s3_2 == 3) {
+
+	  digitalWrite(led3, HIGH);
+	  delay(1000);
+	  digitalWrite(led3, LOW);
+	  delay(1000);
+
+    while (etatbo3 == LOW) {
+      
+      if (etatbo3 == HIGH) {
+        digitalWrite (led3, HIGH);
+        delay(500);
+        digitalWrite(led3, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led3, LOW);
+        seq3_3();
+      }
+    }
+  }
+
+	else if (s3_2 == 4) {
+
+	  digitalWrite(led4, HIGH);
+	  delay(1000);
+	  digitalWrite(led4, LOW);
+	  delay(1000);
+
+    while (etatbo4 == LOW) {
+      
+      if (etatbo4 == HIGH) {
+        digitalWrite (led4, HIGH);
+        delay(500);
+        digitalWrite(led4, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led4, LOW);
+        seq3_3();
+      }
+    }
+  }
+}
+
+
+void seq3_3() {
+  
+    	if (s3_3 == 1) {
+
+	  digitalWrite(led1, HIGH);
+	  delay(1000);
+	  digitalWrite(led1, LOW);
+	  delay(1000);
+    
+    while (etatbo1 == LOW) {
+      
+      if (etatbo1 == HIGH) {
+        digitalWrite (led1, HIGH);
+        delay(500);
+        digitalWrite(led1, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led1, LOW);
+      }
+    }
+  }
+
+	else if (s3_3 == 2) {
+
+	  digitalWrite(led2, HIGH);
+	  delay(1000);
+	  digitalWrite(led2, LOW);
+	  delay(1000);
+
+      while (etatbo2 == LOW) {
+      
+      if (etatbo2 == HIGH) {
+        digitalWrite (led2, HIGH);
+        delay(500);
+        digitalWrite(led2, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led2, LOW);
+      }
+    }
+  }
+
+	else if (s3_3 == 3) {
+
+	  digitalWrite(led3, HIGH);
+	  delay(1000);
+	  digitalWrite(led3, LOW);
+	  delay(1000);
+
+    while (etatbo3 == LOW) {
+      
+      if (etatbo3 == HIGH) {
+        digitalWrite (led3, HIGH);
+        delay(500);
+        digitalWrite(led3, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led3, LOW);
+      }
+    }
+  }
+
+	else if (s3_3 == 4) {
+
+	  digitalWrite(led4, HIGH);
+	  delay(1000);
+	  digitalWrite(led4, LOW);
+	  delay(1000);
+
+    while (etatbo4 == LOW) {
+      
+      if (etatbo4 == HIGH) {
+        digitalWrite (led4, HIGH);
+        delay(500);
+        digitalWrite(led4, LOW);
+        delay(500);
+      }
+      else(){
+        digitalWrite(led4, LOW);
+      }
+    }
+  }
