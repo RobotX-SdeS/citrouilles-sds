@@ -180,16 +180,17 @@ void seq1(){
 
 
 
-//Fonction seq2
+//Fonction seq2_1
 
 void seq2_1(){
 
 	if (s2_1 == 1) {
 
 	  digitalWrite(led1, HIGH);
-	  delay(1000);
+	  //jouer son1
+	  delay(500);
 	  digitalWrite(led1, LOW);
-	  delay(1000);
+	  delay(500);
     
     while (etatbo1 == LOW) {
       
@@ -209,9 +210,9 @@ void seq2_1(){
 	else if (s2_1 == 2) {
 
 	  digitalWrite(led2, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led2, LOW);
-	  delay(1000);
+	  delay(500);
 
       while (etatbo2 == LOW) {
       
@@ -231,9 +232,9 @@ void seq2_1(){
 	else if (s2_1 == 3) {
 
 	  digitalWrite(led3, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led3, LOW);
-	  delay(1000);
+	  delay(500);
 
     while (etatbo3 == LOW) {
       
@@ -253,9 +254,9 @@ void seq2_1(){
 	else if (s2_1 == 4) {
 
 	  digitalWrite(led4, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led4, LOW);
-	  delay(1000);
+	  delay(500);
 
     while (etatbo4 == LOW) {
       
@@ -273,16 +274,19 @@ void seq2_1(){
   }
 }
 
+//Fin de la fonction seq2_1
 
+
+//Fonction seq2_2
 
 void seq2_2() {
   
 	if (s2_2 == 1) {
 
 	  digitalWrite(led2, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led2, LOW);
-	  delay(1000);
+	  delay(500);
     
         while (etatbo1 == LOW) {
       
@@ -302,9 +306,9 @@ void seq2_2() {
 	else if (s2_2 == 2) {
 
 	  digitalWrite(led2, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led2, LOW);
-	  delay(1000);
+	  delay(500);
 
         while (etatbo2 == LOW) {
       
@@ -324,9 +328,9 @@ void seq2_2() {
 	else if (s2_2 == 3) {
 
 	  digitalWrite(led3, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led3, LOW);
-	  delay(1000);
+	  delay(500);
 
         while (etatbo3 == LOW) {
       
@@ -346,9 +350,9 @@ void seq2_2() {
 	else if (s2_2 == 4) {
 
 	  digitalWrite(led4, HIGH);
-	  delay(1000);
+	  delay(500);
 	  digitalWrite(led4, LOW);
-	  delay(1000);
+	  delay(500);
 
         while (etatbo4 == LOW) {
       
@@ -358,6 +362,7 @@ void seq2_2() {
         digitalWrite(led4, LOW);
         delay(500);
       }
+		
       else(){
         digitalWrite(led4, LOW);
         seq3_1();
@@ -365,6 +370,14 @@ void seq2_2() {
     }
   }
 }
+
+//Fin de la fonction seq2_2
+
+
+
+
+//Fonction seq3_1
+
 void seq3_1(){
   	if (s3_1 == 1) {
 
@@ -455,6 +468,9 @@ void seq3_1(){
   }
 }
 
+//Fin de la fonction seq3_1
+
+//Fonction seq3_2
 
 void seq3_2() {
     	if (s3_2 == 1) {
@@ -547,6 +563,12 @@ void seq3_2() {
 }
 
 
+//Fin de la fonction seq3_1
+
+
+
+//Fonction seq3_3
+
 void seq3_3() {
   
     	if (s3_3 == 1) {
@@ -632,3 +654,4 @@ void seq3_3() {
       }
     }
   }
+}
