@@ -86,15 +86,15 @@ void seq1(){
         delay(500);
         digitalWrite(led1, LOW);
         //Arreter son1
-        
-      else(){
+      }
+      else {
         digitalWrite(led1, LOW);
           seq2_1();
        }
       }
     }
     
-  }
+  
 
   else if (s1_1 == 2) {
    digitalWrite(led2, HIGH);
@@ -112,15 +112,16 @@ void seq1(){
         delay(500);
         digitalWrite(led2, LOW);
         //Arreter son2
-        
-      else(){
+      }
+      
+      else {
         digitalWrite(led2, LOW);
           seq2_1();
        }
       }
     }
     
-  }
+  
 
   else if (s1_1 == 3) {
    digitalWrite(led3, HIGH);
@@ -138,12 +139,13 @@ void seq1(){
         delay(500);
         digitalWrite(led3, LOW);
         //Arreter son3
+      }  
         
-      else(){
+      else {
         digitalWrite(led3, LOW);
           seq2_1();
        }
-      }
+      
     }
       
   }
@@ -165,11 +167,13 @@ void seq1(){
         digitalWrite(led4, LOW);
         //Arreter son4
         
-      else(){
+      }
+        
+      else {
         digitalWrite(led4, LOW);
           seq2_1();
        }
-      }
+      
     }
 
   }
@@ -200,7 +204,7 @@ void seq2_1(){
         digitalWrite(led1, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led1, LOW);
         seq2_2();
       }
@@ -222,7 +226,7 @@ void seq2_1(){
         digitalWrite(led2, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led2, LOW);
         seq2_2();
        }
@@ -244,7 +248,7 @@ void seq2_1(){
         digitalWrite(led3, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led3, LOW);
         seq2_2();
       }
@@ -266,7 +270,7 @@ void seq2_1(){
         digitalWrite(led4, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led4, LOW);
         seq2_2();
       }
@@ -296,7 +300,7 @@ void seq2_2() {
         digitalWrite(led1, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led1, LOW);
         seq3_1();
       }
@@ -318,7 +322,7 @@ void seq2_2() {
         digitalWrite(led2, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led2, LOW);
         seq3_1();
       }
@@ -340,7 +344,7 @@ void seq2_2() {
         digitalWrite(led3, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led3, LOW);
         seq3_1();
       }
@@ -363,7 +367,7 @@ void seq2_2() {
         delay(500);
       }
 		
-      else(){
+      else {
         digitalWrite(led4, LOW);
         seq3_1();
       }
@@ -394,7 +398,7 @@ void seq3_1(){
         digitalWrite(led1, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led1, LOW);
         seq3_2();
       }
@@ -416,7 +420,7 @@ void seq3_1(){
         digitalWrite(led2, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led2, LOW);
         seq3_2();
       }
@@ -438,7 +442,7 @@ void seq3_1(){
         digitalWrite(led3, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led3, LOW);
         seq3_2();
       }
@@ -460,7 +464,7 @@ void seq3_1(){
         digitalWrite(led4, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led4, LOW);
         seq3_2();
       }
@@ -488,7 +492,7 @@ void seq3_2() {
         digitalWrite(led1, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led1, LOW);
         seq3_3();
       }
@@ -510,7 +514,7 @@ void seq3_2() {
         digitalWrite(led2, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led2, LOW);
         seq3_3();
       }
@@ -532,7 +536,7 @@ void seq3_2() {
         digitalWrite(led3, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led3, LOW);
         seq3_3();
       }
@@ -554,7 +558,7 @@ void seq3_2() {
         digitalWrite(led4, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led4, LOW);
         seq3_3();
       }
@@ -586,7 +590,7 @@ void seq3_3() {
         digitalWrite(led1, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led1, LOW);
       }
     }
@@ -607,7 +611,7 @@ void seq3_3() {
         digitalWrite(led2, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led2, LOW);
       }
     }
@@ -628,7 +632,7 @@ void seq3_3() {
         digitalWrite(led3, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led3, LOW);
       }
     }
@@ -649,7 +653,7 @@ void seq3_3() {
         digitalWrite(led4, LOW);
         delay(500);
       }
-      else(){
+      else {
         digitalWrite(led4, LOW);
       }
     }
