@@ -33,7 +33,7 @@ void loop() {
   etatbo2 = digitalRead(bo2);
   etatbo3 = digitalRead(bo3);
   etatbo4 = digitalRead(bo4);
-
+}
 void seq1() {
 
 digitalWrite (led1, HIGH);
@@ -57,7 +57,7 @@ delay(500);
     digitalWrite(led3, LOW);
     digitalWrite(led4, LOW);
     delay(500);
-    goto seq2_1;
+    seq2_1();
   }
   else if (etatbo2 == HIGH) {
     digitalWrite(led2, HIGH);
@@ -76,7 +76,7 @@ delay(500);
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    goto seq1;
+    seq1();
   }
   
   else if (etatbo3 == HIGH) {
@@ -96,7 +96,7 @@ delay(500);
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    goto seq1;
+    seq1();
   }
 
   else if (etatbo4 == HIGH) {
@@ -116,7 +116,7 @@ delay(500);
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    goto seq1;
+    seq1();
   }
 
   else {
@@ -127,7 +127,7 @@ delay(500);
   }
 }
 
-  seq2_1:
+  void seq2_1() {
 
   digitalWrite(led1, HIGH);
   delay(500);
@@ -144,7 +144,7 @@ delay(500);
     delay(500);
     digitalWrite(led1, LOW);
     delay(500);
-    goto seq2_2;
+    seq2_2();
   }
 
   else if (etatbo2 == HIGH) {
@@ -164,7 +164,7 @@ delay(500);
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    goto seq1;
+    seq1();
   }
 
   else if (etatbo3 == HIGH) {
@@ -184,7 +184,7 @@ delay(500);
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    goto seq1;
+    seq1();
   }
 
   else if (etatbo4 == HIGH) {
@@ -205,10 +205,11 @@ delay(500);
     delay(500);
     digitalWrite(led1, LOW);
     delay(500);
-    goto seq1;
+    seq1();
   }
+ }
 
-  seq2_2:
+  void seq2_2() {
 
   if (etatbo2 == HIGH) {
     digitalWrite(led2, HIGH);
@@ -245,7 +246,7 @@ delay(500);
     delay(500);
     digitalWrite(led1, LOW);
     delay(500);
-    goto seq1;
+    seq1();
   }
   
   else if (etatbo3 == HIGH) {
@@ -266,7 +267,7 @@ delay(500);
     delay(500);
     digitalWrite(led1, LOW);
     delay(500);
-    goto seq1;
+    seq1();
   }
 
   else if (etatbo4 == HIGH) {
@@ -287,7 +288,8 @@ delay(500);
     delay(500);
     digitalWrite(led1, LOW);
     delay(500);
-    goto seq1;
+    seq1();
   }
-
 }
+
+
