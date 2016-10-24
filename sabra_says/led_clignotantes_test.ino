@@ -28,10 +28,7 @@ void setup() {
  void loop(){
    etatbo1 = digitalRead(bo1);
    
-   seq1();
-   seq2();
-   seq3();
-   seq4();
+
    //reset settings s1, s2, s3, s4
 
  }
