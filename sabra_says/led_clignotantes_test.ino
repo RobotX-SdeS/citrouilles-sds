@@ -27,6 +27,12 @@ void setup() {
 
  void loop(){
    etatbo1 = digitalRead(bo1);
+   
+   seq1();
+   seq2();
+   seq3();
+   seq4();
+   //reset settings s1, s2, s3, s4
 
  }
   void seq1() {
@@ -37,7 +43,6 @@ void setup() {
       delay(500);
       digitalWrite(led1, LOW);
       delay(500);
-      seq2();
     }
 
     else if (s1 == 2) {
@@ -46,7 +51,6 @@ void setup() {
       delay(500);
       digitalWrite(led2, LOW);
       delay(500);
-      seq2();
     }
 
     else if (s1 == 3) {
@@ -55,7 +59,6 @@ void setup() {
       delay(500);
       digitalWrite(led3, LOW);
       delay(500);
-      seq2();
     }
 
       else if (s1 == 4) {
@@ -64,7 +67,6 @@ void setup() {
       delay(500);
       digitalWrite(led4, LOW);
       delay(500);
-      seq2();
     }
   }
   void seq2() {
@@ -75,7 +77,6 @@ void setup() {
       delay(500);
       digitalWrite(led1, LOW);
       delay(500);
-      seq3();
     }
     
     else if (s2 == 2) {
@@ -84,7 +85,6 @@ void setup() {
       delay(500);
       digitalWrite(led2, LOW);
       delay(500);
-      seq3();
     }
     
     else if (s2 == 3) {
@@ -93,7 +93,6 @@ void setup() {
       delay(500);
       digitalWrite(led3, LOW);
       delay(500);
-      seq3();
     }
         
     else if (s2 == 4) {
@@ -102,7 +101,6 @@ void setup() {
       delay(500);
       digitalWrite(led4, LOW);
       delay(500);
-      seq3();
     }
   }
 
@@ -114,7 +112,6 @@ void setup() {
       delay(500);
       digitalWrite(led1, LOW);
       delay(500);
-      seq4();
     }
     
     else if (s3 == 2) {
@@ -123,7 +120,6 @@ void setup() {
       delay(500);
       digitalWrite(led2, LOW);
       delay(500);
-      seq4();
     }
     
     else if (s3 == 3) {
@@ -132,7 +128,6 @@ void setup() {
       delay(500);
       digitalWrite(led3, LOW);
       delay(500);
-      seq4();
     }
         
     else if (s3 == 4) {
@@ -141,7 +136,6 @@ void setup() {
       delay(500);
       digitalWrite(led4, LOW);
       delay(500);
-      seq4();
     }
   }
  
@@ -153,7 +147,6 @@ void setup() {
       delay(500);
       digitalWrite(led1, LOW);
       delay(3000);
-      seq1();
     }
     
     else if (s4 == 2) {
@@ -162,7 +155,6 @@ void setup() {
       delay(500);
       digitalWrite(led2, LOW);
       delay(3000);
-      seq1();
     }
     
     else if (s4 == 3) {
@@ -171,7 +163,6 @@ void setup() {
       delay(500);
       digitalWrite(led3, LOW);
       delay(3000);
-      seq1();
     }
         
     else if (s4 == 4) {
@@ -180,7 +171,6 @@ void setup() {
       delay(500);
       digitalWrite(led4, LOW);
       delay(3000);
-      seq1();
     }
   }
  
