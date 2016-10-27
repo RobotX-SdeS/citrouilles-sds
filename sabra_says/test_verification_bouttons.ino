@@ -7,7 +7,7 @@ const int bo2 = 3;
 int etatbo1;
 int etatbo2;
 
-int Playans;
+int Playans; 
 int Corrans;
 
 
@@ -42,6 +42,8 @@ void seq1() {
 
 void setup_seq1() {
 
+ while (etatbo1 == LOW && etatbo2 == LOW) {
+  
   if (etatbo1 == HIGH) {
     Playans = 1;
   }
@@ -60,17 +62,13 @@ void ans() {
  Corrans = 1;
   
  
- while (etatbo1 == LOW && etatbo2 == LOW) {
-  digitalWrite(led1, LOW);
-  digitalWrite(led2, LOW);
- }
-   
+
   if (Playans == Corrans) {
     digitalWrite(led1, HIGH);
     delay(1000);
     digitalWrite(led1, LOW);
     delay(1000);
-    loop();
+    
   }
   
   else if (Playans > Corrans) {
@@ -78,7 +76,7 @@ void ans() {
     delay(1000);
     digitalWrite(led2, LOW);
     delay(1000);
-    loop();
+    
   }
   
   else {
