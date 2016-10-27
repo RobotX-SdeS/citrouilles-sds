@@ -1,14 +1,20 @@
+/*
+Bug Possibles/Connus
+- La led clignote toute seule (ce n'est pas parce-qu'il détecte le bouton comme étant appuyé: j'ai débranché le fil du bouton et la led continue à clignoter)
+                               À Tester: Mettre un Serial.print(" "); en dessous de la détection bouton
+
+*/
 const int led1 = 13;
 const int led2 = 12;
 
 const int bo1 = 2;
 const int bo2 = 3;
 
-int etatbo1;
-int etatbo2;
+int etatbo1 = 0;
+int etatbo2 = 0;
 
-int Playans; 
-int Corrans;
+int pans = 0; //Player answer
+int cans = 1; //Correct answer
 
 
 
@@ -19,16 +25,17 @@ void setup() {
   
   pinMode(bo1, INPUT);
   pinMode(bo2, INPUT);
-   
+  
+  seq1();
 }
 
 void loop() {
   etatbo1 = digitalRead(bo1);
   etatbo2 = digitalRead(bo2);
   
-
-  seq1();
 }
+
+
 
 void seq1() {
   
@@ -37,45 +44,51 @@ void seq1() {
   delay(500);
   digitalWrite(led1, LOW);
   delay(500);
-  setup_seq1();
+  
+  seq1_check();
 }
 
-void setup_seq1() {
+
+
+void seq1_check() {
 
  while (etatbo1 == LOW && etatbo2 == LOW) {
   
+   
   if (etatbo1 == HIGH) {
-    Playans = 1;
+    //Serial.print("bo1 enfonce");
+    pans = 1;
   }
-  
   else if (etatbo2 == HIGH) {
-    Playans = 2;
+    //Serial.print("bo2 enfonce")
+    pans = 2;
   }
-  
   else {
-    Playans = 0;
+    //Serial.print("relache");
+    pans = 1;
   }
+   
   ans();
- }
-void ans() {
-  
- Corrans = 1;
-  
+ } 
+}
  
+ 
+void ans() {
+  cans = 1;
 
-  if (Playans == Corrans) {
+  if (pans == cans) {
     digitalWrite(led1, HIGH);
-    delay(1000);
+    delay(500);
     digitalWrite(led1, LOW);
-    delay(1000);
+    delay(500);
     
   }
   
-  else if (Playans > Corrans) {
+  else if (pans > cans) {
     digitalWrite(led2, HIGH);
-    delay(1000);
+    delay(500);
     digitalWrite(led2, LOW);
-    delay(1000);
+    delay(500);
     
   }
   
@@ -83,8 +96,7 @@ void ans() {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
   }
- }
-
-
-    
   
+ }
+ 
+ 
