@@ -65,7 +65,7 @@ void seq1_check() {
   }
   else {
     //Serial.print("relache");
-    pans = 1;//remarque : pans dans else ne peut pas etre egal a pans dans if (etatbo1 == HIGH)
+    pans = 1;
   }
    
   ans();
