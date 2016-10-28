@@ -56,15 +56,15 @@ void seq1_check() {
   
    
   if (etatbo1 == HIGH) {
-    //Serial.print("bo1 enfonce");
+    Serial.print("bo1 enfonce");
     pans = 1;
   }
   else if (etatbo2 == HIGH) {
-    //Serial.print("bo2 enfonce")
+    Serial.print("bo2 enfonce");
     pans = 2;
   }
   else {
-    //Serial.print("relache");
+    Serial.print("relache");
     pans = 1;
   }
    
