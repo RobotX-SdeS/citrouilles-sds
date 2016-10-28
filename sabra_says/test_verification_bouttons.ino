@@ -95,6 +95,7 @@ void ans() {
   else {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
+    ans();
   }
   
  }
