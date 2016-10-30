@@ -5,12 +5,18 @@ Bug Possibles/Connus
 */
 const int led1 = 13;//initialiser led1 dans le port 13
 const int led2 = 12;
+const int led3 = 11;
+const int led4 = 10;
 
 const int bo1 = 2;//initialiser bo1 dans le port 2
 const int bo2 = 3;
+const int bo3 = 4;
+const int bo4 = 5;
 
-int etatbo1 = 0;
-int etatbo2 = 0;
+int etatbo1;
+int etatbo2;
+int etatbo3;
+int etatbo4;
 
 int pans; //Player answer// comme ce ne sont pas des constantes, pas besoin de mettre un valeur précise au début
 int cans; //Correct answer
@@ -21,9 +27,13 @@ void setup() {
   
   pinMode(led1, OUTPUT);//initialiser led1 comme OUTPUT
   pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
   
   pinMode(bo1, INPUT);//initialiser bo1 comme INPUT
   pinMode(bo2, INPUT);
+  pinMode(bo3, INPUT);
+  pinMode(bo4, INPUT);
   
 }
 
@@ -48,6 +58,8 @@ void seq1_check() {
 
 etatbo1 = digitalRead(bo1);
 etatbo2 = digitalRead(bo2);
+etatbo3 = digitalRead(bo3);
+etatbo4 = digitalRead(bo4);
 
 if (etatbo1 == HIGH) {
     Serial.print("bo1 enfonce");
@@ -56,6 +68,12 @@ if (etatbo1 == HIGH) {
   else if (etatbo2 == HIGH) {
     Serial.print("bo2 enfonce");
     pans = 2;
+  }
+  else if (etatbo3 == HIGH) {
+   pans = 3; 
+  }
+  else if (etatbo4 == HIGH) {
+    pans = 4;
   }
   else {
     Serial.print("relache");
@@ -71,17 +89,34 @@ void ans() {
 
   if (pans == cans) {
     digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
-    delay(500);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+    delay(1000);
+    loop();
+    
     
   }
   
-  else if (pans > cans) {
+  else if (pans != cans && pans > 0) {
+    digitalWrite(led1, HIGH);
+    delay(500);
+    digitalWrite(led1, LOW);
     digitalWrite(led2, HIGH);
     delay(500);
     digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
     delay(500);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, HIGH);
+    delay(500);
+    digitalWrite(led4, LOW);
+    loop();
     
   }
   
