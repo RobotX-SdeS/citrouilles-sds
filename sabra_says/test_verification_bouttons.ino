@@ -447,4 +447,44 @@ void seq3_3_check() {
    cans = 4;
   ans3_3();
 }
-void
+void ans3_3() {
+  if (pans == cans) {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, HIGH);
+    delay(500);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+    delay(1000);
+    loop();
+    
+    
+  }
+  
+  else if (pans != cans && pans > 0) {
+    digitalWrite(led1, HIGH);
+    delay(500);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, HIGH);
+    delay(500);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    delay(500);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, HIGH);
+    delay(500);
+    digitalWrite(led4, LOW);
+    delay(1000);
+    loop();
+    
+  }
+  
+  else {
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    seq3_3_check();
+  }
+}
