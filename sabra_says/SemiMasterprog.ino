@@ -405,7 +405,7 @@ void seq3_1_check() {
 }
 void ans3_1() {
 
-  if (pans == cans2) {
+  if (pans == cans1) {
     digitalWrite(led1, HIGH);
     digitalWrite(led2, HIGH);
     digitalWrite(led3, HIGH);
@@ -419,7 +419,7 @@ void ans3_1() {
     
   }
   
-  else if (pans != cans2 && pans > 0) {
+  else if (pans != cans1 && pans > 0) {
     digitalWrite(led1, HIGH);
     delay(500);
     digitalWrite(led1, LOW);
@@ -444,4 +444,29 @@ void ans3_1() {
   }
 }
 
+void seq3_2_check() {
+  etatbo1 = digitalRead(bo1);
+  etatbo2 = digitalRead(bo2);
+  etatbo3 = digitalRead(bo3);
+  etatbo4 = digitalRead(bo4);
 
+  if (etatbo1 == HIGH) {
+    Serial.print("bo1 enfonce");
+    pans = 1;
+  }
+  else if (etatbo2 == HIGH) {
+    Serial.print("bo2 enfonce");
+    pans = 2;
+  }
+  else if (etatbo3 == HIGH) {
+    pans = 3;
+  }
+  else if (etatbo4 == HIGH) {
+    pans = 4;
+  }
+  else {
+    Serial.print("relache");
+    pans = 0;
+  }
+  ans3_2();
+}
