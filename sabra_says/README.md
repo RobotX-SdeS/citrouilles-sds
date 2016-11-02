@@ -28,6 +28,6 @@ MATÉRIEL UTILISÉ
  
    Pour réaliser le projet, nous avons utilisé du matériel que nous avons obtenu grâce au démontage d'objets effectué à Estrie-Aide.
    Tout d'abord, il faut savoir que ce qui contrôle les séquences est le Arduino. Il s'agit du cerveau de notre citrouille; nous 
-   l'avons programmé pour faire différentes séquences selon le bouton que nous avons appuyé. Ensuite, nous nous sommes servi des diodes électro-luminescentes pour éclairer la citrouille. Par après, nous avons bien sûr utilisé des fils pour connecter les lumières au Arduino. Finalement, ce qui permet aux lumières d'exécuter la séquence sont les boutons. En appuyant    
+   l'avons programmé pour faire différentes séquences selon le bouton que nous avons appuyé. Ensuite, nous nous sommes servi des diodes électro-luminescentes pour éclairer la citrouille. Par après, nous avons bien sûr utilisé des fils pour connecter les lumières au Arduino. Finalement, ce qui permet aux lumières d'exécuter la séquence sont les boutons. En appuyant sur ceux-ci, le Arduino reçoit la commande pour faire fonctionner les DELs. Nous aurions pu mettre une batterie pour alimenter les lumières en énergie. Par contre, nous avons branché le Arduino dans l'entrée USB de l'ordinateur, ce qui lui offrait l'énegie.   
 
 
