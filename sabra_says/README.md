@@ -5,7 +5,7 @@ Jean-Simon Desjardins, Fares Sabra, François Nicolas Gitzhofer et Gabriel Moris
  
  
  
-## IDÉES
+###### IDÉES
 
 http://www.instructables.com/id/Arduino-Simple-Simon-Says-Game/?ALLSTEPS
 
